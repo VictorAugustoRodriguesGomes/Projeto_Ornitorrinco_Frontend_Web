@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 19px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.btn-primary {
+    display: block;
+    cursor: pointer;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-top: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: #1f2b44;
+    text-decoration: none;
+    border: 3px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #1f2b44;
+    background: transparent;
+    border: 3px solid #1f2b44;
+}
+
+.inputBox {
+    z-index: 6;
+    width: 100%;
+    height: 40px;
+    color: #000000;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.inputBox input,
+.inputBox.textarea textarea {
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+    box-shadow: none;
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    background: transparent;
+}
+
+.inputBox .text {
+    top: 0;
+    left: 0;
+    padding: 0;
+    display: block;
+    font-size: 18px;
+    transition: 0.5s;
+    line-height: 40px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.inputBox input:focus+.text,
+.inputBox input:valid+.text {
+    top: -35px;
+}
+
+
+.inputBox .line {
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    border-radius: 5px;
+    pointer-events: none;
+    background: #1f2b44;
+}
+
+.inputBox input:focus~.line,
+.inputBox input:valid~.line {
+    height: 100%;
+}
+
+.inputBox.textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.inputBox.textarea textarea {
+    height: 80%;
+    resize: none;
+}
+
+.inputBox textarea:focus+.text,
+.inputBox textarea:valid+.text {
+    top: -35px;
+}
+
+.inputBox textarea:focus~.line,
+.inputBox textarea:valid~.line {
+    height: 100%;
+}

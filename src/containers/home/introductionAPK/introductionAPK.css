@@ -1,0 +1,100 @@
+.introductionAPK {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #1f2b44;
+}
+
+.introductionAPK .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    grid-column-gap: 40px;
+    padding: 100px 40px 100px 40px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.introductionAPK .container .container-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.introductionAPK .container .container-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.introductionAPK .container .container-text {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.introductionAPK .container .container-text h2 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.introductionAPK .container .container-text h1 {
+    color: #ffffff;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.introductionAPK .container .container-text h1 span {
+    color: #ffffff;
+}
+
+.introductionAPK .container .container-text p {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.introductionAPK .container .container-text a {
+    width: fit-content;
+    border: 3px solid #ffffff;
+}
+
+.introductionAPK .container .container-text a:hover {
+    color: #1f2b44;
+    background: #ffffff;
+    border: 3px solid #1f2b44;
+}
+
+@media (max-width: 991px) {
+
+    .introductionAPK .container {
+        grid-column-gap: 20px;
+        padding: 100px 20px 100px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+
+    .introductionAPK .container {
+        display: block;
+        padding: 40px 10px 0px 10px;
+    }
+
+    .introductionAPK .container .container-img img {
+        height: 300px;
+    }
+
+    .introductionAPK .container .container-text {
+        margin-top: 30px;
+    }
+
+    .introductionAPK .container .container-text a {
+        width: 100%;
+    }
+
+}

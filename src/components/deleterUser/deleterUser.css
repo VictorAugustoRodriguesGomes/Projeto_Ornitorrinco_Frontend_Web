@@ -1,0 +1,95 @@
+@keyframes section-enter-deleter-user {
+    0% {
+        left: 0;
+        z-index: 100;
+        bottom: -100%;
+    }
+
+    100% {
+        left: 0;
+        bottom: 0%;
+    }
+}
+
+.introductionDeleterUser {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: -300%;
+    z-index: -100;
+    position: fixed;
+    padding: 100px 40px;
+    background: #ffffff;
+    border-top: solid 1px #1f2b44;
+}
+
+.introductionDeleterUser.active {
+    z-index: 100;
+    animation: section-enter-deleter-user 0.5s ease forwards;
+}
+
+.introductionDeleterUser .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.introductionDeleterUser .container .container-button {
+    width: 100%;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.introductionDeleterUser .container .container-button .btn-primary {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.introductionDeleterUser .container .container-button .btn-primary:nth-child(2) {
+    background: #e83b31;
+}
+
+.introductionDeleterUser .container .container-button .btn-primary:nth-child(2):hover {
+    color: #e83b31;
+    background: transparent;
+    border: 3px solid #e83b31;
+}
+
+
+@media (max-width: 991px) {
+
+    .introductionDeleterUser {
+        padding: 100px 20px;
+    }
+
+    .introductionDeleterUser .container .container-button {
+        grid-column-gap: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+
+    .introductionDeleterUser {
+        padding: 100px 10px;
+    }
+
+    .introductionDeleterUser .container h1 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .introductionDeleterUser .container .container-button {
+        display: block;
+    }
+
+    .introductionDeleterUser .container .container-button .btn-primary {
+        margin: 0 0 10px 0;
+    }
+}
