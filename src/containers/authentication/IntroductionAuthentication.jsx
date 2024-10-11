@@ -75,6 +75,12 @@ const IntroductionAuthentication = () => {
 
     useEffect(() => {
         const startInput = () => {
+            const tokenUserSuper = localStorage.getItem("tokenUser");
+
+            if (tokenUserSuper != null) {
+                navigate('/Profile');
+            }
+
             const userRecovered = JSON.parse(localStorage.getItem("user"));
 
             if (userRecovered) {
@@ -152,9 +158,9 @@ const IntroductionAuthentication = () => {
         e.preventDefault();
         setLoading(true);
 
-        const inputSignUpName = loginInputEmail.current.value.trim();
-        const inputSignUpEmail = loginInputPassword.current.value.trim();
-        const inputSignUpPassword = loginInputPassword.current.value.trim();
+        const inputSignUpName = signUpInputName.current.value.trim();
+        const inputSignUpEmail = signUpInputEmail.current.value.trim();
+        const inputSignUpPassword = signUpInputPassword.current.value.trim();
 
         if (inputSignUpName === '' || inputSignUpName === null || inputSignUpEmail === '' || inputSignUpEmail === null || inputSignUpPassword.length < 8 || inputSignUpPassword === '' || inputSignUpPassword === null) {
 
@@ -271,7 +277,6 @@ const IntroductionAuthentication = () => {
             return;
         }
 
-        console.log(inputVerificationCode + ' verific')
         if (inputVerificationCode.length != 6) {
             setErrorMessageVerificationCode('O código deve ter 6 dígitos');
             setLoading(false);
@@ -309,6 +314,7 @@ const IntroductionAuthentication = () => {
             setLoading(false);
         }
     };
+
 
     return (
         <>
@@ -430,8 +436,8 @@ const IntroductionAuthentication = () => {
                     <div className='container-text'>
                         <h1> Codigo de verificacão </h1>
 
-                        <p >Para avançar, por favor, verifique seu e-mail, onde enviamos um código de verificação de 6 dígitos. 
-                            Digite o código no campo abaixo. Se você não encontrar o e-mail, verifique a pasta de spam ou 
+                        <p >Para avançar, por favor, verifique seu e-mail, onde enviamos um código de verificação de 6 dígitos.
+                            Digite o código no campo abaixo. Se você não encontrar o e-mail, verifique a pasta de spam ou
                             lixo eletrônico. </p>
 
                         <form className="container-form" onSubmit={submitVerificationCode}>

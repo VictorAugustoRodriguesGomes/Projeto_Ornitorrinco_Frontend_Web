@@ -1,5 +1,7 @@
 {
   "name": "projeto_ornitorrinco",
+  "description": "Criei uma API REST que permite aos usuários realizar funções para criar contas, recuperar senhas, fazer login, visualizar e atualizar suas informações, além de alterar a foto de perfil. A API também inclui um sistema de autenticação em dois fatores (2FA) via e-mail", 
+  "author": "Victor Augusto Rodrigues Gomes",
   "private": true,
   "version": "1.0.0",
   "type": "module",

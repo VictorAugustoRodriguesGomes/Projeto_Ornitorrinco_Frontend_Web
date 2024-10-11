@@ -41,7 +41,6 @@ const DeleterUser = ({ isDeleterUser, setIsDeleterUser }) => {
             if (err.response && err.response.data) {
 
                 if (err.response.data.code === 404 || err.response.data.code === 401) {
-                    console.log('Email inexistente ou inválido!');
                     navigate('/authentication');
                 }
 
@@ -54,6 +53,7 @@ const DeleterUser = ({ isDeleterUser, setIsDeleterUser }) => {
         }
     };
 
+    
     return (
         <>
 

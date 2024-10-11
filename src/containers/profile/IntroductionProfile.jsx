@@ -91,18 +91,20 @@ const IntroductionProfile = () => {
 
                 if (profile.data.status === 'success') {
 
+
                     changeNameInputName.current.value = profile.data.user.displayName;
 
                     setProfileName(profile.data.user.displayName);
                     setProfileEmail(profile.data.user.email);
-                    setProfilePhoto('http://localhost:3333' + profile.data.user.photo);
-                    setProfileChangePhoto('http://localhost:3333' + profile.data.user.photo);
+                    setProfilePhoto(apiUrl.slice(0, -1) + profile.data.user.photo);
+                    setProfileChangePhoto(apiUrl.slice(0, -1) + profile.data.user.photo);
                     setIsDeleterUser(false);
 
                 }
 
             } catch (err) {
                 console.log(err);
+                localStorage.removeItem('tokenUser');
                 navigate('/authentication');
             } finally {
                 setLoading(false);
@@ -296,7 +298,6 @@ const IntroductionProfile = () => {
         if (tokenUserSuper === null) {
             navigate('/authentication');
         }
-        
     };
 
     const handleDragOver = (e) => {
