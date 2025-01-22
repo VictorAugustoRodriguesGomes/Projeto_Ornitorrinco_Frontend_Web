@@ -425,7 +425,7 @@ const IntroductionProfile = () => {
                     </div>
 
                     <div className='container-text'>
-                        <h1> Altere sua senha </h1>
+                        <h1> Altere sua foto </h1>
 
                         <form className="container-form" onSubmit={submitChangePhoto} >
 
